@@ -1,0 +1,68 @@
+mysql 명령어
+
+* root로 접속
+mysql -u root(유저명) -p(테이블명)
+
+* 데이터베이스 목록보기
+show databases;
+
+*데이터베이스 추가
+create database 데이터베이스명;
+
+*데이터베이스 삭제 
+drop database 데이터베이스명;
+
+* 테이블 목록 보기
+show tables;
+
+*테이블 상세 보기
+desc 테이블명  해당 테이블에 field 목록을 볼수있다
+
+*테이블 권한 부여 및 user 생성
+grant insert, select, update, delete, create, alter, drop on 테이블명.* to 'seowh'@'localhost' identified by '123456';
+
+계정 추가
+create user 'swh'@'localhost' identified by '1111';
+
+계정 삭제
+drop user 'swh'@'localhost';
+
+*테이블 생성 
+create table member(
+ 필드명 , 데이터타입, null값체크, PRIMARY KEY(필드명) 입력
+) 
+
+*테이블 삭제
+drop table 테이블명;
+
+* 테이블 수정
+alter table 테이블명 change 기존컬럼명 변경할 컬럼명 컬럼타입;
+
+*테이블 필드 추가
+alter table 테이블명  add 컬럼명 컬럽타입
+
+
+insert 문
+  insert init member(id, passwd, email, tel)// 필드명 입력
+   > values('seowh','123456','swh@naver.com','010-9870-2928');// 수정할 values 입력
+
+
+select  문
+  select  원하는 필드(*사용할떄 전체를 가져온다)  from user; // 해당 user 테이블 목록를 볼떄 사용
+  insert into member(필드명 지정), (value지정)
+	where조건문
+	select * from 테이블명 where 조건;
+
+
+
+update 문
+ update member set 수정할데이터명 where 조건
+  ex) update member set passwd='222222' where id ='hong'
+
+
+delete 문
+ delete from member where id ='hong';
+
+
+
+
