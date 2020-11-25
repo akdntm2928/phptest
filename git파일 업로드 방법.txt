@@ -1,0 +1,9 @@
+1. apach 설정파일은 httpd.conf 파일 에서 수정 
+2. php 설정 수정은 php.ini 파일에서주어
+
+github 파일 업로드 순서
+
+1. 해당 디렉토리에 git init
+2. 해당 디렉토리에 git add .
+3. git commit -m "adding files" 해당 파일들을 commit 할수 있게 만듬
+4. git remote add origin 저장소 주소
