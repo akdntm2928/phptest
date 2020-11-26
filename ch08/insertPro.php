@@ -18,6 +18,7 @@ try {
     $stmh->execute();
     $pdo->commit();   
     print "데이터가 추가가 되었습니다.";
+    header('Location:http://localhost/ch08/list.php');
 } catch (PDOException $Exception) {
     print"오류: ".$Exception->getMessage();
 }

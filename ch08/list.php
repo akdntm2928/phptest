@@ -23,6 +23,7 @@ $pdo= db_connect();
             print"가입자가 없습니다";
         }else{        
         ?>
+        <a href="insertForm.php">신규가입</a>
         <table border='1' width='800'>
             <tr align="center">
                 <th>이메일</th>
