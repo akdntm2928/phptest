@@ -21,15 +21,7 @@ try{
 
 $row = $stmh->fetch(PDO::FETCH_ASSOC);
 
-if($count<1){ 
-
-?>
-    <script>
-        alert('아이디가 틀립니다');
-        history.back();
-    </script>
-<?php }
-    else if($id = $_REQUEST['id'] == 'admin'&& $pass == 123456 )
+if($id = $_REQUEST['id'] == 'admin'&& $pass == 123456 )
     {
         $_SESSION['userid']='admin';
         $_SESSION['name']='관리자';
@@ -38,6 +30,14 @@ if($count<1){
         header("Location:http://localhost/ch09/index.php");
         exit;
     }
+    else if($id = $_REQUEST['id'] == 'admin'&& $pass == 123456 ){
+    ?>
+    <script>
+        alert('아이디가 틀립니다');
+        history.back();
+    </script>
+<?php }
+
     else if($pass != $row['pass']){ ?>
     <script>
         alert('비밀번호가 틀립니다');
