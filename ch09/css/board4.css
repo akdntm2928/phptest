@@ -331,6 +331,7 @@
 }
 
 #ripple_writer_title ul {
+        text-align: left;
 	margin-left:5px;
 }
 
@@ -352,6 +353,7 @@
 }
 
 #ripple_content {
+        text-align: left;
 	padding:10px;
 	margin-left:5px;
 	line-height:150%;

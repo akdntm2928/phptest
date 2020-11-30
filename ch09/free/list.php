@@ -7,6 +7,7 @@ session_start();
         <meta charset="UTF-8">
         <link rel="stylesheet" type="text/css" href="../css/common.css">
         <link rel="stylesheet" type="text/css" href="../css/concert.css">
+        <link  rel="stylesheet" type="text/css" href="../css/board4.css">
     </head>
         <?php
         require_once '../lib/MYDB.php';
@@ -59,7 +60,7 @@ session_start();
                 </div>                
                 <div id="col2">
                     <div id="title">
-                        <img src="../img/title_concert.gif">
+                        <img src="../img/title_free.gif">
                     </div>                    
                     <form name="board_form" method="post" action="list.php?mode=search">
                         <div id="list_search">
@@ -104,7 +105,7 @@ session_start();
                             $item_date=substr($item_date,0,10);
                             $item_subject= str_replace("", "&nbsp", $row['subject']);
                             
-                            $sql ="select *from phptest.free-ripple where parent=$item_num";
+                            $sql ="select *from phptest.free_ripple where parent=$item_num";
                             $stmh1 = $pdo->query($sql); 
                             $num_ripple=$stmh1->rowCount();
                         ?>
@@ -145,7 +146,7 @@ session_start();
                        } catch (PDOException $ex) {
                        print "오류".$ex->getMessage();
                    }
-                    ?>
+?>
                 </div>
             </div>
         </div>
