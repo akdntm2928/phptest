@@ -1,0 +1,16 @@
+{
+    "name": "seowh/composer-app",
+    "authors": [
+        {
+            "name": "swh9870",
+            "email": "swh9870@naver.com"
+        }
+    ],
+    "require": {
+        "monolog/monolog": "^2.1"
+    },
+    
+    "autoload": {
+        "psr-4": {"Greeting\\": "source/Greeting/"}
+    }
+}
