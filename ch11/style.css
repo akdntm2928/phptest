@@ -1,0 +1,83 @@
+body{
+    margin: 0;
+    font-family: 'Source Sans Pro';
+}
+a{
+    text-decoration: none;
+    /* a태그에 밑줄을 없애줌 */
+    color: white;
+}
+.navber{
+    display: flex;
+    /* flex 기능 */
+    justify-content: space-between;
+    /* 박스 사이에 space를 줌 */
+    align-items: center;
+    /* 박스간에 수직 적으로 수평을 맞춰줌 */
+    background-color: #273343;
+    padding: 8px 12px
+}
+
+.navber_logo{
+    font-size: 24px;
+    color: #d49466;
+}
+.navbar_menu{
+    display: flex;
+    list-style: none;
+    /* ul '을 없애줌 */
+    padding-left: 0;
+}
+.navbar_menu li{
+    padding: 8px 12px;
+}
+.navbar_menu li:hover{
+    background-color: #f1aa77;    
+    font-size: 20px;
+    border-radius: 4px;
+}
+.navber_icons{
+    list-style: none;
+    color: white;
+    display: flex;
+}
+.navber_icons li{
+    padding: 8px 12px;
+}
+.navber_toogleBtn{
+    position: absolute;
+    right: 32px;
+    font-size: 24px;
+    color: #d49466;
+    display: none;
+}
+@media screen and (max-width:760px){
+    .navber {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 8px 24px;
+    }
+    .navbar_menu {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    .navbar_menu li{
+        width: 100%;
+        text-align: center;
+    }
+    .navber_icons{
+        display: none;
+        justify-content: center;
+        width: 100%;
+        padding-left: 0;
+    }
+    .navber_toogleBtn{
+        display: block;
+    }
+    .navbar_menu.active,
+    .navber_icons.active{
+        display: flex;
+    }
+}
