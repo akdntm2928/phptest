@@ -8,9 +8,9 @@ require_once __DIR__.'/vendor/autoload.php';
 $log = new Logger('name');
 $log->pushHandler(new StreamHandler(__DIR__.'/app.log', Logger::ERROR));
 $log->pushHandler(new NativeMailerHandler(
-    to:'swh9870@naver.com',
-    subject:'swh9870@naver.com',
-    from:'out@system.com',
+    $to:'swh9870@naver.com',
+    $subject:'swh9870@naver.com',
+    $from:'out@system.com',
     Logger:Logger::EMERGENCY));
 
 // add records to the log

@@ -1,0 +1,16 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;  
+    padding: 20px;
+}
+header div {
+    color: cornsilk;
+}
+header .logo i {
+    color: crimson;
+}
+header .icons .fa-search{
+    margin-right: 20px;
+}

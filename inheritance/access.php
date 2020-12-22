@@ -24,7 +24,6 @@ echo $obj->_public;
 // echo $obj->_protected;
 // protected는 obj통해서 직접 접근이 불가능하다
 // echo $obj->_private;
-
 $obj->callpubilc();
 $obj->callprotected();
 $obj->callprivate();
